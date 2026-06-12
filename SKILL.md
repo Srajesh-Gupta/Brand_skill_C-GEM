@@ -1,6 +1,7 @@
 ---
 name: cgem-brand
 description: Generate fully on-brand content, copy, HTML components, slides, documents, and communications for C-GEM (Centre for Grower-centric Eco-value Mechanisms), India's only non-profit accountability partner for smallholder farming communities in carbon and ecosystem markets. Use this skill whenever the user mentions C-GEM, brand guidelines, on-brand content, marketing pages, programme communications, partnership memos, methodology docs, transparency dashboards, decks, social posts, or anything that carries the C-GEM identity — even if they don't say "brand" explicitly. Also triggers for: writing copy for farming/carbon market programmes, designing web pages for the EEF, generating HTML with the C-GEM design system, Carbon Ready™ / Carbon Bridge™ / Climate Learn™ / Beyond Carbon™ programme materials.
+user-invocable: true
 ---
 
 # C-GEM Brand Skill
