@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- C-GEM Platform Skin Template · v2.0 -->
+<!-- Use for: methodology docs, transparency dashboards, project feeds, audit surfaces -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title><!-- Dashboard title --></title>
+  <link rel="stylesheet" href="colors_and_type.css">
+  <style>
+    :root { --doc-max: 1320px; --gutter: clamp(16px, 3vw, 48px); }
+    * { box-sizing: border-box; }
+    body { font-feature-settings: "ss01" 1; }
+    .shell { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+    .sidebar { border-right: 1px solid var(--line-ink); padding: 24px; background: var(--paper); position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+    .main { padding: clamp(24px, 3vw, 48px); background: var(--paper); }
+    .page-header { border-bottom: 1px solid var(--line-ink); padding-bottom: 16px; margin-bottom: 32px; }
+    .data-row { display: flex; flex-wrap: wrap; gap: 1px; background: var(--line-ink); border: 1px solid var(--line-ink); margin-bottom: 32px; }
+    .data-cell { background: var(--paper); flex: 1; min-width: 180px; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th { text-align: left; font-family: var(--font-jetbrains-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); border-bottom: 1px solid var(--line-ink); padding: 8px 12px; }
+    td { padding: 10px 12px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+    tr:last-child td { border-bottom: none; }
+    .badge { display: inline-block; font-family: var(--font-jetbrains-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border: 1px solid currentColor; }
+    .badge--active { color: var(--leaf-600); }
+    .badge--pending { color: var(--harvest); }
+    .badge--verified { color: var(--lime); background: var(--ink); }
+  </style>
+</head>
+<body class="platform-skin">
+
+<div class="shell">
+
+  <!-- ── SIDEBAR ──────────────────────────────────────── -->
+  <aside class="sidebar">
+    <div style="margin-bottom:32px;">
+      <img src="assets/logos/stacked-black.png" alt="C-GEM" style="height:40px; margin-bottom:8px;">
+      <div class="eyebrow" style="font-size:9px;">Transparency Platform</div>
+    </div>
+    <nav style="font-size:13px;">
+      <div class="eyebrow" style="margin-bottom:8px; color:var(--ink-faint);">[01] Projects</div>
+      <ul style="list-style:none; padding:0; margin:0 0 24px;">
+        <li style="padding:6px 0; border-bottom:1px solid var(--line);"><a href="#">Overview</a></li>
+        <li style="padding:6px 0; border-bottom:1px solid var(--line);"><a href="#">Verification status</a></li>
+        <li style="padding:6px 0; border-bottom:1px solid var(--line);"><a href="#">Benefit sharing</a></li>
+      </ul>
+      <div class="eyebrow" style="margin-bottom:8px; color:var(--ink-faint);">[02] Methodology</div>
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li style="padding:6px 0; border-bottom:1px solid var(--line);"><a href="#">Protocols</a></li>
+        <li style="padding:6px 0; border-bottom:1px solid var(--line);"><a href="#">Audit log</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ── MAIN CONTENT ─────────────────────────────────── -->
+  <main class="main">
+
+    <div class="page-header">
+      <div class="eyebrow" style="margin-bottom:4px;">[01] · Project transparency feed</div>
+      <h1 style="font-size:var(--fs-h2);"><!-- Dashboard headline --></h1>
+      <p style="font-size:13px; color:var(--ink-soft); margin-top:4px;">Last updated: <!-- date --></p>
+    </div>
+
+    <!-- Stats row -->
+    <div class="data-row">
+      <div class="data-cell">
+        <div class="eyebrow" style="margin-bottom:8px; color:var(--ink-faint);">Total reach</div>
+        <div class="stat" style="font-size:clamp(28px,3vw,40px);">2,71,000 <span class="unit" style="font-family:var(--font-jetbrains-mono); font-style:normal; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); font-size:0.3em;">families</span></div>
+      </div>
+      <div class="data-cell">
+        <div class="eyebrow" style="margin-bottom:8px; color:var(--ink-faint);">Verified projects</div>
+        <div class="stat" style="font-size:clamp(28px,3vw,40px);">5 <span class="unit" style="font-family:var(--font-jetbrains-mono); font-style:normal; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); font-size:0.3em;">projects</span></div>
+      </div>
+      <div class="data-cell">
+        <div class="eyebrow" style="margin-bottom:8px; color:var(--ink-faint);">States covered</div>
+        <div class="stat" style="font-size:clamp(28px,3vw,40px);">14 <span class="unit" style="font-family:var(--font-jetbrains-mono); font-style:normal; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); font-size:0.3em;">states</span></div>
+      </div>
+    </div>
+
+    <!-- Data table -->
+    <div style="border:1px solid var(--line-ink); margin-bottom:32px;">
+      <div style="padding:12px 16px; border-bottom:1px solid var(--line-ink); display:flex; justify-content:space-between; align-items:center;">
+        <div class="eyebrow">Project index</div>
+        <span class="badge badge--active">Live data</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Project name</th>
+            <th>State</th>
+            <th>Families</th>
+            <th>Programme</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Add rows here -->
+          <tr>
+            <td style="font-family:var(--font-jetbrains-mono); font-size:11px; color:var(--ink-faint);">[01]</td>
+            <td><!-- Project name --></td>
+            <td><!-- State --></td>
+            <td><!-- e.g. 42,000 --></td>
+            <td><span class="badge badge--active">Carbon Bridge™</span></td>
+            <td><span class="badge badge--verified">Verified</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer attribution -->
+    <div style="border-top:1px solid var(--line); padding-top:16px;">
+      <p class="footnote">C-GEM · Eco-Value Empowerment Foundation · Farmers First · Climate Always</p>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>
