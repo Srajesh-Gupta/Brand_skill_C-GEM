@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- C-GEM Marketing Skin Template · v2.0 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title><!-- Page title --></title>
+  <!-- Self-hosted fonts: copy fonts/ and colors_and_type.css from the Branding repo -->
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root { --doc-max: 1320px; --gutter: clamp(20px, 4vw, 64px); }
+    * { box-sizing: border-box; }
+    img { display: block; max-width: 100%; }
+    .sec {
+      max-width: var(--doc-max);
+      margin: 0 auto;
+      padding: clamp(56px, 8vw, 128px) var(--gutter);
+    }
+    .sec--ink { max-width: none; background: var(--ink); color: var(--paper); }
+    .sec--ink > * { max-width: var(--doc-max); margin: 0 auto; padding: 0 var(--gutter); }
+    .sec--tonal { max-width: none; background: var(--paper-tonal); }
+    .sec--tonal > * { max-width: var(--doc-max); margin: 0 auto; padding: clamp(56px,8vw,128px) var(--gutter); }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px,5vw,80px); align-items: start; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    @media (max-width: 900px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+    .stat-row { display: flex; flex-wrap: wrap; gap: 48px; }
+    .divider { height: 1px; background: var(--line); border: 0; margin: 0; }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────────────── -->
+<header style="border-bottom:1px solid var(--line); padding: 16px var(--gutter);">
+  <div style="max-width:var(--doc-max); margin:0 auto; display:flex; align-items:center; justify-content:space-between;">
+    <img src="../assets/logos/horizontal-full-colour.png" alt="C-GEM" style="height:32px;">
+    <nav style="display:flex; gap:24px; font-size:14px;">
+      <a href="#">Programmes</a>
+      <a href="#">About</a>
+      <a href="#" class="btn btn--leaf" style="padding:8px 16px;">Partner with us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<section class="sec brushmark-bg" style="padding-top:clamp(72px,10vw,160px);">
+  <div class="eyebrow" style="margin-bottom:16px;"><!-- Eyebrow label --></div>
+  <h1 style="font-size:var(--fs-display); font-weight:500; letter-spacing:var(--tracking-display); line-height:0.95; max-width:14ch; margin-bottom:24px;">
+    <!-- Hero headline. Sentence case. Use <em class="voice"> for italic accent. -->
+  </h1>
+  <p class="lede" style="margin-bottom:40px;"><!-- 1–2 sentence lede. --></p>
+  <div style="display:flex; gap:12px; flex-wrap:wrap;">
+    <a href="#" class="btn btn--primary"><!-- Primary CTA --></a>
+    <a href="#" class="btn btn--secondary"><!-- Secondary CTA --></a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── STATS ─────────────────────────────────────────────── -->
+<section class="sec">
+  <div class="stat-row">
+    <div>
+      <div class="stat">2,71,000 <span class="unit">farming families</span></div>
+      <p class="footnote" style="margin-top:8px;">Across 14 Indian states · Since 2022</p>
+    </div>
+    <div>
+      <div class="stat">5 <span class="unit">verified projects</span></div>
+      <p class="footnote" style="margin-top:8px;">Active C-GEM accountability partnerships</p>
+    </div>
+    <div>
+      <div class="stat">14 <span class="unit">states</span></div>
+      <p class="footnote" style="margin-top:8px;">Across India's farming belt</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── MISSION BLOCK ─────────────────────────────────────── -->
+<section class="sec">
+  <div class="grid-2">
+    <div>
+      <div class="eyebrow" style="margin-bottom:16px;">Who we are</div>
+      <h2><!-- Section headline --></h2>
+      <p style="margin-top:16px;"><!-- Body copy. --></p>
+      <blockquote style="margin:24px 0 0; padding-left:20px; border-left:3px solid var(--leaf-600);">
+        <p class="voice" style="font-size:20px;"><!-- Community voice quote --></p>
+        <footer class="attribution" style="margin-top:8px;">— <!-- Name, location, year --></footer>
+      </blockquote>
+    </div>
+    <div>
+      <!-- Image or illustration -->
+      <div style="aspect-ratio:4/3; background:var(--paper-card); border-radius:var(--radius-lg); display:flex; align-items:center; justify-content:center;">
+        <p class="footnote">↑ Drop image · [location], [year]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROGRAMMES ──────────────────────────────────────── -->
+<section class="sec--tonal">
+  <div class="eyebrow" style="margin-bottom:16px;">Programmes</div>
+  <h2 style="margin-bottom:40px; font-size:var(--fs-h2);"><!-- Section headline --></h2>
+  <div class="grid-3">
+    <!-- Programme tile — repeat for each programme -->
+    <div class="card" data-programme="ready">
+      <div class="eyebrow" style="color:var(--programme-accent); margin-bottom:12px;">Carbon Ready™</div>
+      <h3><!-- Programme headline --></h3>
+      <p style="margin-top:12px; font-size:14px;"><!-- 2-sentence description --></p>
+    </div>
+    <div class="card" data-programme="bridge">
+      <div class="eyebrow" style="color:var(--programme-accent); margin-bottom:12px;">Carbon Bridge™</div>
+      <h3><!-- Programme headline --></h3>
+      <p style="margin-top:12px; font-size:14px;"></p>
+    </div>
+    <div class="card" data-programme="learn">
+      <div class="eyebrow" style="color:var(--programme-accent); margin-bottom:12px;">Climate Learn™</div>
+      <h3><!-- Programme headline --></h3>
+      <p style="margin-top:12px; font-size:14px;"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRIPLET / CLOSING ──────────────────────────────── -->
+<section class="sec--ink">
+  <div style="padding: clamp(56px,8vw,128px) 0; text-align:center;">
+    <div class="triplet" style="justify-content:center; margin-bottom:24px;">
+      <span>People-centric</span><span>Tech-enabled</span><span>Planetary-scale</span>
+    </div>
+    <h2 style="color:var(--paper); font-size:var(--fs-h1); max-width:16ch; margin:0 auto 24px;">
+      <!-- Closing statement -->
+    </h2>
+    <a href="#" class="btn btn--leaf"><!-- CTA --></a>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer style="border-top:1px solid var(--line); padding:32px var(--gutter);">
+  <div style="max-width:var(--doc-max); margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
+    <img src="../assets/logos/horizontal-black.png" alt="C-GEM" style="height:24px; opacity:0.6;">
+    <p class="footnote">© Eco-Value Empowerment Foundation · Farmers First · Climate Always</p>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

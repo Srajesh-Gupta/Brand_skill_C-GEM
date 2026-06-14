@@ -1,0 +1,163 @@
+{
+  "skill_name": "cgem-brand",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Write a one-page partnership memo to Rainmatter Foundation about Carbon Bridge™. We're looking to deepen the partnership for the next field season. Keep it on-brand.",
+      "expected_output": "An HTML or markdown memo in C-GEM voice: no hype words, no 'beneficiaries', programme name with ™, Indian numerals, Newsreader italic voice moments, correct brand strings, funder-appropriate tone.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "no-beneficiaries",
+          "description": "The word 'beneficiar' (covers beneficiary/beneficiaries) does not appear anywhere in the output",
+          "check": "string_absent",
+          "value": "beneficiar"
+        },
+        {
+          "name": "programme-trademark",
+          "description": "Carbon Bridge™ appears with the trademark symbol",
+          "check": "string_present",
+          "value": "Carbon Bridge™"
+        },
+        {
+          "name": "brand-string-exact",
+          "description": "C-GEM appears hyphenated and in caps (not CGEM or c-gem)",
+          "check": "string_present",
+          "value": "C-GEM"
+        },
+        {
+          "name": "no-hype-words",
+          "description": "None of: revolutionary, game-changing, disruptive, transformative, powerful, unlock appear in the output",
+          "check": "none_of_strings",
+          "value": ["revolutionary", "game-changing", "disruptive", "transformative", "powerful", "unlock"]
+        },
+        {
+          "name": "contains-data-point",
+          "description": "At least one concrete number or verifiable fact appears (e.g. 2,71,000 or 14 states or 5 projects)",
+          "check": "llm_judge",
+          "value": "Does the output contain at least one concrete data point such as a number of farming families, states, or projects? Answer yes or no."
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Create an HTML stat section I can drop into the C-GEM homepage. Should show our three headline numbers with the right design system styling.",
+      "expected_output": "Self-contained HTML snippet using C-GEM design tokens: --leaf-600, --sprout, Geist Mono, tabular-nums, Indian-format numerals (2,71,000 / 5 / 14), .stat and .unit classes, .eyebrow label, white ground.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "indian-numeral-format",
+          "description": "2,71,000 appears (not 271,000 or 2.71 lakh or 271000)",
+          "check": "string_present",
+          "value": "2,71,000"
+        },
+        {
+          "name": "design-token-leaf",
+          "description": "References --leaf-600 or #2C7A3D (C-GEM primary brand green)",
+          "check": "any_of_strings",
+          "value": ["--leaf-600", "#2C7A3D", "2C7A3D"]
+        },
+        {
+          "name": "tabular-nums",
+          "description": "tabular-nums appears in the CSS for numeric figures",
+          "check": "string_present",
+          "value": "tabular-nums"
+        },
+        {
+          "name": "stat-class-used",
+          "description": ".stat class or stat styling applied to numeric figures",
+          "check": "any_of_strings",
+          "value": ["class=\"stat\"", "class='stat'", ".stat"]
+        },
+        {
+          "name": "white-ground",
+          "description": "Background uses white (#FFFFFF or --paper), not grey or cream",
+          "check": "any_of_strings",
+          "value": ["#FFFFFF", "--paper", "ffffff", "FFFFFF"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Draft a LinkedIn post announcing that C-GEM now works across 14 Indian states. Should feel authentic, not corporate.",
+      "expected_output": "Short LinkedIn post: no emoji, no hype words, Indian numeral grouping where used, C-GEM hyphenated and caps, farmers as protagonists not 'beneficiaries', authentic declarative voice.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "no-emoji",
+          "description": "No emoji characters appear in the post",
+          "check": "llm_judge",
+          "value": "Does the output contain any emoji characters? Answer yes (contains emoji) or no (no emoji)."
+        },
+        {
+          "name": "no-beneficiaries",
+          "description": "The word 'beneficiar' does not appear",
+          "check": "string_absent",
+          "value": "beneficiar"
+        },
+        {
+          "name": "no-hype-words",
+          "description": "None of: revolutionary, game-changing, disruptive, transformative appear",
+          "check": "none_of_strings",
+          "value": ["revolutionary", "game-changing", "disruptive", "transformative"]
+        },
+        {
+          "name": "brand-string-exact",
+          "description": "C-GEM appears hyphenated and caps",
+          "check": "string_present",
+          "value": "C-GEM"
+        },
+        {
+          "name": "farmers-as-protagonists",
+          "description": "Farmers described with active agency — not as passive recipients",
+          "check": "llm_judge",
+          "value": "Are farming communities / smallholder farmers described with active agency (e.g. they lead, negotiate, own, protect, thrive) rather than as passive recipients (e.g. they receive, access, benefit from, are helped)? Answer yes or no."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Build an HTML programme overview page for Carbon Ready™ targeting FPOs and grassroots NGOs exploring carbon markets for the first time.",
+      "expected_output": "Full HTML page using marketing skin: Geist fonts, --harvest accent for Carbon Ready™, .voice Newsreader italic moments, .eyebrow labels, .lede intro, .stat blocks, audience-appropriate warm plain language, white ground, no hype.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "harvest-accent",
+          "description": "Uses --harvest or #C98A1F for Carbon Ready™ accent colour",
+          "check": "any_of_strings",
+          "value": ["--harvest", "#C98A1F", "C98A1F"]
+        },
+        {
+          "name": "programme-trademark",
+          "description": "Carbon Ready™ appears with trademark symbol",
+          "check": "string_present",
+          "value": "Carbon Ready™"
+        },
+        {
+          "name": "no-beneficiaries",
+          "description": "The word 'beneficiar' does not appear",
+          "check": "string_absent",
+          "value": "beneficiar"
+        },
+        {
+          "name": "geist-font-referenced",
+          "description": "Geist font is loaded or referenced (marketing skin requirement)",
+          "check": "string_present",
+          "value": "Geist"
+        },
+        {
+          "name": "voice-class-or-newsreader",
+          "description": ".voice class or Newsreader font used for a quote or lede moment",
+          "check": "any_of_strings",
+          "value": ["class=\"voice\"", "class='voice'", ".voice", "Newsreader"]
+        },
+        {
+          "name": "no-hype-words",
+          "description": "None of: revolutionary, game-changing, disruptive, transformative, synergies, leverage appear",
+          "check": "none_of_strings",
+          "value": ["revolutionary", "game-changing", "disruptive", "transformative", "synergies"]
+        }
+      ]
+    }
+  ]
+}
