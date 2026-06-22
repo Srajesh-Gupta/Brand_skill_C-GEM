@@ -99,7 +99,7 @@ Google Fonts CDN fallback (for online environments):
 1. **Indian grouping system always:** `2,71,000` — never `271,000`. The comma falls after 2 digits from the right for thousands, then every 2 digits.
 2. **Lakh/crore for domestic contexts:** "27 lakh farming families" not "2.7 million" when writing for Indian audiences.
 3. **Tabular figures on all data:** `font-variant-numeric: tabular-nums` on every stat column, data table, or metric display.
-4. **Units:** Italic-serif unit in marketing skin (`.unit` child inside `.stat`). Mono uppercase unit in platform skin.
+4. **Units:** Italic-serif unit in marketing skin (`.unit` child inside `.stat`). Mono uppercase unit in platform skin. Always `font-size: clamp(11px, 0.32em, 18px)` — bare `0.32em` computes to ~7px at mobile stat sizes.
 
 Examples:
 ```

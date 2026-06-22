@@ -8,7 +8,7 @@ Paths relative to this skill folder (wherever `brand_skill/` is installed).
 **Stacked:** `assets/logos/stacked-{full-colour,black,white,inverse}.png`
 **Logomark:** `assets/logos/logomark-{full-colour,alt,alt-2}.png`
 **Textmark:** `assets/logos/textmark.png`
-**Brushmark:** `assets/logo-brushmark.png` — hero anchor / bg motif (7% opacity) / inline mark
+**Brushmark:** `assets/logo-brushmark.png` — three sanctioned roles: section/hero watermark (6–10%, `.brushmark-bg` helper defaults to 7%), centred voice anchor (up to 12–14% on paper-tonal), inline cap-height mark. Always green, never recoloured or cropped.
 **Bar/divider:** `assets/logo-{bar,divider}-{black,color,white}.png`
 
 Rules: clear space = half cap-height of "C-GEM" min. Min 80px digital / 18mm print. Never recolour brushmark. Full Colour only on white/light bg. Never crop, stretch, skew, rotate.

@@ -118,6 +118,7 @@ Headings: weight 500, line-height 1.05, tracking −0.025em to −0.035em. Body:
              Platform: mono caps instead.
 .triplet     Signature rhythm. Mono caps, green dots. "Farmers First · Climate Always"
 .stat        Big tabular-num figure. Include <span class="unit"> child.
+             .unit must use `font-size: clamp(11px, 0.32em, 18px)` — never bare `0.32em`.
 .eyebrow     Mono 11px caps, 0.12em tracking, leaf-600. Section labels ONLY.
 .hl          Sprout/lime inline highlight on emphasis word.
 .lede        18px intro paragraph, max-width 60ch.
@@ -125,7 +126,7 @@ Headings: weight 500, line-height 1.05, tracking −0.025em to −0.035em. Body:
 .attribution Same as footnote.
 .mono        Code chip on --paper-card.
 .deva        Devanagari helper, weight 600.
-.brushmark-bg  7% opacity brushmark backdrop on section — use `assets/logo-brushmark.png` as `background-image`, never a CSS text "C" or SVG path approximation. The real asset is at `d:\Antigravity Projects\Branding\assets\logo-brushmark.png`; in HTML use a relative path `../../../assets/logo-brushmark.png` or embed as base64 if the file will be opened standalone.
+.brushmark-bg  Brushmark backdrop on a section — use `assets/logo-brushmark.png` as `background-image`, never a CSS text "C" or SVG path approximation. Opacity by role: 6–10% as a hero/section watermark (`.brushmark-bg` helper defaults to 7%); up to 12–14% as a centred voice anchor on a paper-tonal cover section. The real asset is at `d:\Antigravity Projects\Branding\assets\logo-brushmark.png`; in HTML use a relative path `../../../assets/logo-brushmark.png` or embed as base64 if the file will be opened standalone.
 ```
 
 **Geist Mono discipline — critical:** Geist Mono is a precision instrument, not wallpaper. Overusing it (eyebrows on every section, all stat units, all footnotes, all chips, the triplet, the CTA label) makes the output read as generic AI-generated design. Use it for: `.eyebrow` section labels, `.stat` figures, `.triplet` signature lines, `.footnote`/`.attribution` meta. Do NOT use it for: body copy, sub-headings, button labels, card descriptions, or any text a reader actually reads for meaning. If in doubt, use Geist (the display/body font) instead. The contrast between Newsreader Italic (warm, human) and Geist Mono (precise, functional) is what makes the brand feel intelligent — not the mono font itself.
@@ -146,7 +147,7 @@ Assets in `assets/logos/` — horizontal, stacked, logomark variants in black/wh
 - **Never** place Full Colour on coloured, patterned, or photographic backgrounds — use White or Inverse there
 - **Never** crop, stretch, skew, or rotate
 - **Minimum:** 80px wide (digital), 18mm (print)
-- Brushmark C modes: background motif (≤7% opacity), hero anchor, inline mark
+- Brushmark C, three sanctioned modes: hero/section watermark (6–10% opacity), centred voice anchor (up to 12–14% on paper-tonal), inline cap-height nav mark — always green, never recoloured or cropped
 
 ---
 
@@ -185,7 +186,7 @@ Before finishing any artefact, verify every item:
 6. Voice moments in Newsreader Italic (or mono caps in platform skin)?
 7. Logo on clean ground with clear space, ≥80px?
 8. Sky `#3A5FA8` only on EEF statutory stamp — nowhere else?
-9. Brushmark is `assets/logo-brushmark.png` at ≤7% opacity — not a CSS text char or SVG arc?
+9. Brushmark is `assets/logo-brushmark.png` (not a CSS text char or SVG arc) at a sanctioned opacity — 6–10% watermark, up to 12–14% only as a centred voice anchor?
 10. Geist Mono used sparingly (labels, stats, meta only) — not on body copy or button text?
 11. Copy contains no "no stake in credits" or similar language about C-GEM's financial position in the market?
 
