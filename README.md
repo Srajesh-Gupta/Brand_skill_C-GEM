@@ -18,6 +18,10 @@ Once installed, use `/cgem-brand` to invoke it manually, or it will trigger auto
 brand_skill/
 ├── SKILL.md                      Core skill instructions
 ├── README.md                     This file
+├── colors_and_type.css           The design system stylesheet — every template links to it;
+│                                 defines all tokens and type-role classes (.voice, .triplet, .stat, …)
+├── DESIGN.md                     Standalone Google Stitch design spec (for Stitch screen generation;
+│                                 not part of the content-generation load path)
 ├── evals/
 │   └── evals.json                Test prompts for skill evaluation
 ├── references/
@@ -32,9 +36,8 @@ brand_skill/
 │   ├── email-memo.html           Partnership memo / funder update
 │   └── slide-deck.html           Presentation (arrow-key navigation, both skins)
 └── assets/
-    ├── logo-brushmark.png        Primary brushmark C — hero anchor and background motif
-    ├── logo-*.png                Bar, divider, stacked, horizontal lockup variants
-    ├── logos/                    All logo variants (horizontal, stacked, logomark) in black/white/colour/inverse
+    ├── logos/                    All logo variants (horizontal, stacked, logomark, textmark) in
+    │                             black/white/colour/inverse — plus logo-brushmark.png, the primary brushmark C
     ├── illustrations/            Warm sketch illustrations for section breaks and pull-quotes
     ├── photography/              Documentary field photography, farmers as protagonists
     └── fonts/                    Variable woff2 fonts (Geist, Newsreader, Space Grotesk, JetBrains Mono, Noto Devanagari)

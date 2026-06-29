@@ -113,6 +113,8 @@ Headings: weight 500, line-height 1.05, tracking −0.025em to −0.035em. Body:
 
 ## Type roles — use these CSS classes
 
+All tokens and the classes below live in `colors_and_type.css` at the skill root. Every template links it (`<link rel="stylesheet" href="../colors_and_type.css">`); link it the same way in new HTML rather than re-declaring tokens.
+
 ```
 .voice       Newsreader italic, leaf-700. Community quotes, ledes, emphasis.
              Platform: mono caps instead.
@@ -126,7 +128,7 @@ Headings: weight 500, line-height 1.05, tracking −0.025em to −0.035em. Body:
 .attribution Same as footnote.
 .mono        Code chip on --paper-card.
 .deva        Devanagari helper, weight 600.
-.brushmark-bg  Brushmark backdrop on a section — use `assets/logo-brushmark.png` as `background-image`, never a CSS text "C" or SVG path approximation. Opacity by role: 6–10% as a hero/section watermark (`.brushmark-bg` helper defaults to 7%); up to 12–14% as a centred voice anchor on a paper-tonal cover section. The real asset is at `d:\Antigravity Projects\Branding\assets\logo-brushmark.png`; in HTML use a relative path `../../../assets/logo-brushmark.png` or embed as base64 if the file will be opened standalone.
+.brushmark-bg  Brushmark backdrop on a section — use `assets/logos/logo-brushmark.png` as `background-image`, never a CSS text "C" or SVG path approximation. Opacity by role: 6–10% as a hero/section watermark (`.brushmark-bg` helper defaults to 7%); up to 12–14% as a centred voice anchor on a paper-tonal cover section. From a file in `templates/` the relative path is `../assets/logos/logo-brushmark.png`; embed as base64 if the file will be opened standalone.
 ```
 
 **Geist Mono discipline — critical:** Geist Mono is a precision instrument, not wallpaper. Overusing it (eyebrows on every section, all stat units, all footnotes, all chips, the triplet, the CTA label) makes the output read as generic AI-generated design. Use it for: `.eyebrow` section labels, `.stat` figures, `.triplet` signature lines, `.footnote`/`.attribution` meta. Do NOT use it for: body copy, sub-headings, button labels, card descriptions, or any text a reader actually reads for meaning. If in doubt, use Geist (the display/body font) instead. The contrast between Newsreader Italic (warm, human) and Geist Mono (precise, functional) is what makes the brand feel intelligent — not the mono font itself.
@@ -143,7 +145,7 @@ Assets in `assets/logos/` — horizontal, stacked, logomark variants in black/wh
 
 - **Clear space:** half the cap-height of "C-GEM" on all sides minimum
 - **Never** recolour the brushmark arc
-- **Never** substitute the brushmark with a CSS text character, SVG arc, or ::before pseudo-element — always use `assets/logo-brushmark.png`
+- **Never** substitute the brushmark with a CSS text character, SVG arc, or ::before pseudo-element — always use `assets/logos/logo-brushmark.png`
 - **Never** place Full Colour on coloured, patterned, or photographic backgrounds — use White or Inverse there
 - **Never** crop, stretch, skew, or rotate
 - **Minimum:** 80px wide (digital), 18mm (print)
@@ -186,7 +188,7 @@ Before finishing any artefact, verify every item:
 6. Voice moments in Newsreader Italic (or mono caps in platform skin)?
 7. Logo on clean ground with clear space, ≥80px?
 8. Sky `#3A5FA8` only on EEF statutory stamp — nowhere else?
-9. Brushmark is `assets/logo-brushmark.png` (not a CSS text char or SVG arc) at a sanctioned opacity — 6–10% watermark, up to 12–14% only as a centred voice anchor?
+9. Brushmark is `assets/logos/logo-brushmark.png` (not a CSS text char or SVG arc) at a sanctioned opacity — 6–10% watermark, up to 12–14% only as a centred voice anchor?
 10. Geist Mono used sparingly (labels, stats, meta only) — not on body copy or button text?
 11. Copy contains no "no stake in credits" or similar language about C-GEM's financial position in the market?
 
